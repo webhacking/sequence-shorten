@@ -2,7 +2,7 @@
 
 Shorten your sequence number or hash key.
 
-<p align="center">
+<p align="left">
 <a href="https://travis-ci.org/webhacking/sequence-shorten"><img src="https://travis-ci.org/webhacking/sequence-shorten.svg?branch=master" alt="Build Status"></a>
 <a href="https://codecov.io/gh/webhacking/sequence-shorten"><img src="https://codecov.io/gh/webhacking/sequence-shorten/branch/master/graph/badge.svg" /></a>
 </p>
