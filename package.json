@@ -11,7 +11,8 @@
   "scripts": {
     "format": "./node_modules/.bin/prettier --write \"**/*.ts\"",
     "test": "./node_modules/.bin/jest --testPathIgnorePatterns dist",
-    "coverage": "./node_modules/.bin/jest --coverage --testPathIgnorePatterns dist"
+    "coverage": "./node_modules/.bin/jest --coverage --testPathIgnorePatterns dist",
+    "post-coverage": "./node_modules/.bin/nyc report --reporter=json > coverage/coverage.json"
   },
   "keywords": [
     "URL shortener",
