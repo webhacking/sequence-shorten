@@ -1,16 +1,16 @@
 export default class SequenceShorten<T> {
-  public readonly charset: string;
-  public readonly base: number;
-  public readonly lookup: any;
-  public readonly _indexOne: number = 0;
-  public readonly _indexTwo: number = 26;
-  public readonly _indexThree: number = 52;
-  public readonly _a: number;
-  public readonly _A: number;
-  public readonly _0: number;
-  public readonly _z: string;
-  public readonly _Z: string;
-  public readonly _9: string;
+  private readonly charset: string;
+  private readonly base: number;
+  private readonly lookup: any;
+  private readonly _indexOne: number = 0;
+  private readonly _indexTwo: number = 26;
+  private readonly _indexThree: number = 52;
+  private readonly _a: number;
+  private readonly _A: number;
+  private readonly _0: number;
+  private readonly _z: string;
+  private readonly _Z: string;
+  private readonly _9: string;
 
   public constructor() {
     this.charset = `${new Array(26)
