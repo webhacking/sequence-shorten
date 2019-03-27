@@ -26,7 +26,11 @@ cache:
     - node_modules
 
 script:
-- npm test
+  - npm test
+  - npm install codecov -g
+  - codecov -f coverage/*.json
 
+after_success:
+  - codecov
 git:
   depth: 1

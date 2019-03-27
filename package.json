@@ -1,5 +1,10 @@
 {
   "name": "sequence-shorten",
+  "author": "Hax0r <a@hax0r.info>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webhacking/sequence-shorten.git"
+  },
   "version": "1.0.0",
   "description": "Shorten your sequence number or hash key",
   "main": "./dist/sequence-shorten.js",
@@ -16,12 +21,13 @@
     "URL短地址",
     "URLアドレス"
   ],
-  "author": "a@hax0r.info",
   "license": "ISC",
   "dependencies": {
     "@babel/core": "^7.4.0",
     "@babel/preset-typescript": "^7.3.3",
     "@types/jest": "^24.0.11",
+    "codecov": "^3.2.0",
+    "nyc": "^13.3.0",
     "typescript": "^3.3.4000"
   },
   "devDependencies": {

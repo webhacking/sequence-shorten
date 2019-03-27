@@ -2,6 +2,11 @@
 
 Shorten your sequence number or hash key.
 
+<p align="center">
+[![Build Status](https://travis-ci.org/webhacking/sequence-shorten.svg?branch=master)](https://travis-ci.org/webhacking/sequence-shorten)
+
+</p>
+
 ## Install
 
 ```
