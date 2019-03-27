@@ -51,10 +51,10 @@ export default class SequenceShorten<T> {
     return url.reverse().join('');
   }
 
-  public decode(seqNum: string): number {
+  public decode(hashSeqNum: string): number {
     let id: number = 0;
-    for (let i: number = 0, l = seqNum.length; i < l; i++) {
-      const charCode = this._lookUpCharset({})[seqNum[i]];
+    for (let i: number = 0, l = hashSeqNum.length; i < l; i++) {
+      const charCode = this._lookUpCharset({})[hashSeqNum[i]];
       if (this._a <= charCode && charCode <= this._z) {
         id = id * this.base + charCode - this._a;
       }
