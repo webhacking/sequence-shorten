@@ -5,7 +5,8 @@
   "main": "./dist/sequence-shorten.js",
   "scripts": {
     "format": "./node_modules/.bin/prettier --write \"**/*.ts\"",
-    "test": "./node_modules/.bin/jest --testPathIgnorePatterns dist"
+    "test": "./node_modules/.bin/jest --testPathIgnorePatterns dist",
+    "coverage": "./node_modules/.bin/jest --coverage --testPathIgnorePatterns dist"
   },
   "keywords": [
     "URL shortener",

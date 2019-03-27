@@ -18,7 +18,7 @@ const sequenceNumber = 19950824;
 
 
 // Result: bvShE
-new SequenceShorten.encode(sequenceNumber);
+(new SequenceShorten).encode(sequenceNumber);
 ```
 
 Or want to decode like below.
@@ -26,10 +26,10 @@ Or want to decode like below.
 
 import SequenceShorten from './sequence-shorten';
 const sequenceNumber = 19950824;
-const encodedNumber = new SequenceShorten.encode(sequenceNumber);
+const encodedNumber = (new SequenceShorten).encode(sequenceNumber);
 
 // Result: 19950824
-new SequenceShorten.decode(encodedNumber);
+(new SequenceShorten).decode(encodedNumber);
 
 ```
 
