@@ -42,6 +42,7 @@
       "^.+\\.ts$": "ts-jest"
     },
     "testRegex": "\\.spec\\.ts$",
+    "collectCoverage":true,
     "moduleFileExtensions": [
       "ts",
       "js"
