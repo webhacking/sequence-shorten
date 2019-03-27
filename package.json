@@ -2,20 +2,25 @@
   "name": "url-shortener",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/sequence-shorten.js",
   "scripts": {
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "format": "./node_modules/.bin/prettier --write \"**/*.ts\""
   },
-  "lint-staged": {
-    "*.ts": [
-      "prettier --write",
-      "git add"
-    ]
-  },
+  "keywords": [
+    "URL shortener",
+    "shortener",
+    "shorten",
+    "URL 짧은 주소",
+    "URL短地址",
+    "URLアドレス"
+  ],
   "author": "a@hax0r.info",
   "license": "ISC",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "jest": "^24.5.0",
-    "prettier": "^1.16.4"
+    "prettier": "^1.16.4",
+    "tslint": "^5.14.0"
   }
 }
