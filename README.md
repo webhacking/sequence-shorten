@@ -18,7 +18,7 @@ npm i sequence-shorten
 If u want to encode ur sequence number or hash key.
 
 ```typescript
-import SequenceShorten from './sequence-shorten';
+import SequenceShorten from 'sequence-shorten';
 const sequenceNumber = 19950824;
 
 
@@ -29,7 +29,7 @@ const sequenceNumber = 19950824;
 Or want to decode like below.
 ```typescript
 
-import SequenceShorten from './sequence-shorten';
+import SequenceShorten from 'sequence-shorten';
 const sequenceNumber = 19950824;
 const encodedNumber = (new SequenceShorten).encode(sequenceNumber);
 
