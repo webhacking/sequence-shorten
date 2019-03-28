@@ -8,6 +8,7 @@
   "version": "1.0.0",
   "description": "Shorten your sequence number or hash key",
   "main": "./dist/sequence-shorten.js",
+  "types": "dist/sequence-shorten.d.ts",
   "scripts": {
     "format": "./node_modules/.bin/prettier --write \"**/*.ts\"",
     "test": "./node_modules/.bin/jest --testPathIgnorePatterns dist",
@@ -42,7 +43,7 @@
       "^.+\\.ts$": "ts-jest"
     },
     "testRegex": "\\.spec\\.ts$",
-    "collectCoverage":true,
+    "collectCoverage": true,
     "moduleFileExtensions": [
       "ts",
       "js"

@@ -1,20 +1,11 @@
 {
-  "compileOnSave": false,
   "compilerOptions": {
-    "outDir": "dist/",
     "module": "commonjs",
-    "sourceMap": true,
-    "declaration": true,
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "alwaysStrict": true,
-    "pretty": true,
-    "baseUrl": "./src",
     "target": "es6",
-    "typeRoots": [
-      "node_modules/@types"
-    ]
+    "declaration": true,
+    "outDir": "./dist"
   },
-  "include": ["src/**/*.ts"]
+  "include": [
+    "src/**/*"
+  ]
 }
