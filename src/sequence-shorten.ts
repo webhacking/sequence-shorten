@@ -12,7 +12,13 @@ export default class SequenceShorten<T> {
   private readonly _Z: string;
   private readonly _9: string;
 
-  public constructor() {
+  private readonly encoder: (val: number) => number;
+  private readonly decoder: (val: number) => number;
+
+  public constructor(
+    encoder?: (val: number) => number,
+    decoder?: (val: number) => number
+  ) {
     this.charset = `${new Array(26)
       .fill(1)
       .map((_, i) => String.fromCharCode(65 + i).toLowerCase())
@@ -29,6 +35,8 @@ export default class SequenceShorten<T> {
     this._z = this._lookUpCharset({})['z'];
     this._Z = this._lookUpCharset({})['Z'];
     this._9 = this._lookUpCharset({})['9'];
+    this.encoder = encoder || (x => x);
+    this.decoder = decoder || (x => x);
   }
 
   private _lookUpCharset(charsetByIndex?: {
@@ -42,6 +50,7 @@ export default class SequenceShorten<T> {
   }
 
   public encode(seqNum: number): string {
+    seqNum = this.encoder(seqNum);
     const url: string[] = [];
     while (seqNum) {
       url.push(this.charset[seqNum % this.base]);
@@ -65,7 +74,7 @@ export default class SequenceShorten<T> {
         id = id * this.base + charCode - this._0 + this._indexThree;
       }
     }
-
+    id = this.decoder(id);
     return id;
   }
 }
