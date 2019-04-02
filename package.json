@@ -5,7 +5,7 @@
     "type": "git",
     "url": "git+https://github.com/webhacking/sequence-shorten.git"
   },
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Shorten your sequence number or hash key",
   "main": "./dist/sequence-shorten.js",
   "types": "dist/sequence-shorten.d.ts",
