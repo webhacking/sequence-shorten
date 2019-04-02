@@ -11,7 +11,9 @@ export default class SequenceShorten<T> {
     private readonly _z;
     private readonly _Z;
     private readonly _9;
-    constructor();
+    private readonly encoder;
+    private readonly decoder;
+    constructor(encoder?: (val: number) => number, decoder?: (val: number) => number);
     private _lookUpCharset;
     encode(seqNum: number): string;
     decode(hashSeqNum: string): number;

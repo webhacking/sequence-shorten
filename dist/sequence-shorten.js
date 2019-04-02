@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 class SequenceShorten {
-    constructor() {
+    constructor(encoder, decoder) {
         this._indexOne = 0;
         this._indexTwo = 26;
         this._indexThree = 52;
@@ -21,6 +21,8 @@ class SequenceShorten {
         this._z = this._lookUpCharset({})['z'];
         this._Z = this._lookUpCharset({})['Z'];
         this._9 = this._lookUpCharset({})['9'];
+        this.encoder = encoder || (x => x);
+        this.decoder = decoder || (x => x);
     }
     _lookUpCharset(charsetByIndex) {
         for (let i = 0, l = this.charset.length; i < l; i++) {
@@ -30,6 +32,7 @@ class SequenceShorten {
         return charsetByIndex;
     }
     encode(seqNum) {
+        seqNum = this.encoder(seqNum);
         const url = [];
         while (seqNum) {
             url.push(this.charset[seqNum % this.base]);
@@ -51,6 +54,7 @@ class SequenceShorten {
                 id = id * this.base + charCode - this._0 + this._indexThree;
             }
         }
+        id = this.decoder(id);
         return id;
     }
 }
