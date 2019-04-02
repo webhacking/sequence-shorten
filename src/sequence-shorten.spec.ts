@@ -1,6 +1,7 @@
+import SequenceShorten from './sequence-shorten';
+
 const testSequenceNumber = 19950824;
 const testSequenceNumberHash = 'bvShE';
-const SequenceShorten = require('./sequence-shorten.ts').default;
 const seqShorten = new SequenceShorten();
 
 it('Encode sequence number', () => {
@@ -9,4 +10,10 @@ it('Encode sequence number', () => {
 
 it('Decode sequence number', () => {
   expect(seqShorten.decode(testSequenceNumberHash)).toBe(testSequenceNumber);
+});
+
+it('Customized sequence generator', () => {
+  const val = 123456789;
+  const seq = new SequenceShorten(x => (x << 4) + 3, x => x >> 4);
+  expect(seq.decode(seq.encode(val))).toBe(val);
 });
