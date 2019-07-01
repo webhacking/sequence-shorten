@@ -24,6 +24,21 @@ const sequenceNumber = 19950824;
 
 // Result: bvShE
 (new SequenceShorten).encode(sequenceNumber);
+
+
+// If you care about security, you can encrypt the value by adding the encoder and decoder as argument values when you create the object as shown below.
+
+const encoder = (value: number): number => {
+  const key = Math.floor(Math.random() * 0xff) + 0x01;
+  return ((value ^ key) << 8) | key;
+};
+
+const decoder = (value: number): number => {
+  const key = value & 0xff;
+  return (value >> 8) ^ key;
+};
+
+(new SequenceShorten(encoder, decoder)).encode(sequenceNumber);
 ```
 
 Or want to decode like below.
