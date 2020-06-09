@@ -27,7 +27,7 @@
   "dependencies": {
     "@babel/core": "^7.4.0",
     "@babel/preset-typescript": "^7.3.3",
-    "@types/jest": "^25.0.0",
+    "@types/jest": "^26.0.0",
     "codecov": "^3.2.0",
     "nyc": "^14.0.0",
     "typescript": "^3.3.4000"
