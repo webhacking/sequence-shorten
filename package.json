@@ -35,7 +35,7 @@
   "devDependencies": {
     "jest": "25.2.7",
     "prettier": "1.17.0",
-    "ts-jest": "24.3.0",
+    "ts-jest": "26.5.6",
     "tslint": "5.20.1",
     "tslint-config-prettier": "1.18.0"
   },
