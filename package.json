@@ -33,7 +33,7 @@
     "typescript": "^3.3.4000"
   },
   "devDependencies": {
-    "jest": "25.2.7",
+    "jest": "25.5.4",
     "prettier": "1.17.0",
     "ts-jest": "24.3.0",
     "tslint": "5.20.1",
